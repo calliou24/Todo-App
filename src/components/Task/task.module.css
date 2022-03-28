@@ -1,0 +1,53 @@
+.task{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--task-bottom-border);
+  background-color: var(--task-bg);
+}
+
+.firstCont{
+  display: flex;
+}
+.checker{
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--grayish-blue);
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.checkIcon{
+  user-select: none;
+}
+
+.taskName{
+  color: var(--text);
+  font-weight: 400;
+}
+.delete{
+  cursor: pointer;
+  display: flex;
+  width: 15px;
+  height: 15px;
+} 
+.crossImg{
+  object-fit: cover;
+  width: 100%;
+  margin: auto;
+}
+
+#taskCompleted{
+  transition: all .2s;
+  background-image:var(--check-gradient) ;
+}
+#taskNameComplete{
+  text-decoration: line-through;
+  color:var(--dark-grayish-blue);
+}
