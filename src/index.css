@@ -15,7 +15,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin';
-  transition: all .2s;
 }
 
 *::-webkit-scrollbar{
@@ -48,6 +47,7 @@ body {
   --white:#FFFFFF;
   background-color: var(--first-color);
   overflow-x:hidden ;
+  transition: all .3s;
 
 }
 
@@ -71,7 +71,6 @@ body.dark {
 .App {
   width: 100vw;
   min-height: 100vh;
-  transition: all .2s;
   position: relative;
   display: flex;
   overflow-x:hidden ;
