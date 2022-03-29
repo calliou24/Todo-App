@@ -1,13 +1,12 @@
-
-import TodoApp from "./components/TodoApp/todoApp"
+import TodoApp from './components/TodoApp/todoApp';
 
 function App() {
-  return (
-    <div className="App">      
-      <header className='header-hero'></header>
-      <TodoApp/>
-    </div>
-  )
+	return (
+		<main id='main' className="App">
+				<header className="header-hero" />
+				<TodoApp />
+		</main>
+	);
 }
 
-export default App
+export default App;
