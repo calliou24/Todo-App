@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin';
+  transition: all .2s;
 }
 
 *::-webkit-scrollbar{
@@ -46,7 +47,7 @@ body {
 
   --white:#FFFFFF;
   background-color: var(--first-color);
-  transition: all .2s;
+  overflow-x:hidden ;
 
 }
 
@@ -73,6 +74,7 @@ body.dark {
   transition: all .2s;
   position: relative;
   display: flex;
+  overflow-x:hidden ;
 }
 
 .header-hero {

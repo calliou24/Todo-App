@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import styles from './form.module.css'
 import check from '../../assets/images/icon-check.svg'
-
+import { CheckIcon } from '@chakra-ui/icons'
 
 function Form({handdleAdd}:FormTypes) {
   
@@ -26,10 +26,13 @@ function Form({handdleAdd}:FormTypes) {
   return (
     <form onSubmit={( e )=> handdleSubmit(e)} className={styles.form}>
       <div id={complete ? styles.taskComplete : undefined} onClick={()=> setComplete(!complete)} className={styles.completeTask}>
-        {complete && <img className={styles.checkIcon} src={check} alt='check icon'/>}
+        {complete && <img className={styles.check} src={check} alt='check icon'/>}
       </div>
       <input className={styles.input} value={inputValue} onChange={(e)=> setInputValue(e.target.value)} placeholder='Create a new todo'></input>
-    </form>
+      <div onClick={handdleSubmit} className={styles.checkIconCont}>
+        <CheckIcon className={styles.icon}/>
+      </div>
+  </form>
   )
 }
 

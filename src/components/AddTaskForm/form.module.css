@@ -6,26 +6,29 @@
   margin: 0 0 30px 0;
   border-radius: 3px;
   box-shadow: 0 0 20px 10px #0002 ;
+  position: relative;
 }
 
 .completeTask{
   width: 20px;
   height: 20px;
   border-radius:50%;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid var(--grayish-blue);
   cursor: pointer;
   transition: all .2s;
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #taskComplete{
   background-image:var(--check-gradient);
 }
 
-.checkIcon{
-  transform: scale(.9);
+.check{
+    width: 100%;
+    transform: scale(.7);
 }
 .input{
   background-color: transparent;
@@ -34,4 +37,31 @@
   color: var(--text);
   font-size: 1rem;
   width: 100%;
+  margin-left:40px ;
+}
+
+.checkIconCont{
+  position: absolute;
+  color: var(--text);
+  transition: all .1s;
+  width: 55px;
+  height: 55px;
+  background-color: var(--first-color);
+  right: 0px;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.icon {
+  transition: all .1s;
+  font-size: 1rem;
+}
+
+@media (max-width : 50em) {
+  .checkIconCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
