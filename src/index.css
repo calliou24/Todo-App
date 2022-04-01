@@ -17,12 +17,12 @@
   font-family: 'Josefin';
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   width: 10px;
 }
 
-*::-webkit-scrollbar-thumb{
-  background-color: #7774;  
+*::-webkit-scrollbar-thumb {
+  background-color: #7774;
 }
 
 body {
@@ -32,9 +32,9 @@ body {
   --check-gradient: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   --bright-blue: hsl(220, 98%, 61%);
 
-  --text:hsl(235, 19%, 35%);
-  --task-bg:hsl(0, 0%, 98%);
-  --task-bottom-border:hsl(236, 33%, 92%);
+  --text: hsl(235, 19%, 35%);
+  --task-bg: hsl(0, 0%, 98%);
+  --task-bottom-border: hsl(236, 33%, 92%);
 
   --first-color: hsl(0, 0%, 98%);
   --first-color-grayish: hsl(236, 33%, 92%);
@@ -44,9 +44,9 @@ body {
   --bg-img-desktop: url(./assets/images/bg-desktop-light.jpg);
   --bg-img-mobile: url(./assets/images/bg-mobile-light.jpg);
 
-  --white:#FFFFFF;
+  --white: #FFFFFF;
   background-color: var(--first-color);
-  overflow-x:hidden ;
+  overflow-x: hidden;
   transition: all .3s;
 
 }
@@ -54,9 +54,9 @@ body {
 
 body.dark {
 
-  --text:hsl(234, 39%, 85%);
-  --task-bg:hsl(235, 24%, 19%);
-  --task-bottom-border:hsl(237, 14%, 26%);
+  --text: hsl(234, 39%, 85%);
+  --task-bg: hsl(235, 24%, 19%);
+  --task-bottom-border: hsl(237, 14%, 26%);
 
   --first-color: hsl(235, 21%, 11%);
   --first-color-grayish: hsl(235, 24%, 19%);
@@ -73,7 +73,7 @@ body.dark {
   min-height: 100vh;
   position: relative;
   display: flex;
-  overflow-x:hidden ;
+  overflow-x: hidden;
 }
 
 .header-hero {

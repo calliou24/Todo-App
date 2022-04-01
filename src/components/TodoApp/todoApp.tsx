@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import styles from './todo-app.module.css';
 import Form from '../AddTaskForm/form';
 
@@ -9,19 +7,18 @@ import sun from '../../assets/images/icon-sun.svg';
 import Task from '../Task/task';
 import useGetData from '../../hooks/useGetData';
 import { Reorder } from 'framer-motion';
-import { ToastContainer } from 'react-toastify';
 
 function TodoApp() {
 	const {
-		taskList,
-		setTaskList,
 		theme,
+		visibleTasks,
+		setTaskList,
 		handdleChangeTheme,
 		handdleAddTask,
 		handdleClearComplete,
 		handdleDelete,
-		handdleActive,
-		handdleFilterComplete
+		handdleComplete,
+		handdleFilter,
 	} = useGetData();
 
 	return (
@@ -38,24 +35,25 @@ function TodoApp() {
 					</div>
 				</div>
 				<Form handdleAdd={handdleAddTask} />
-				<ToastContainer theme={theme === 'light' ? 'light' : 'dark'} />
 			</header>
 			<div className={styles.taskCont}>
-				<Reorder.Group className={styles.taskList} axis="y" values={taskList} onReorder={setTaskList}>
-					{taskList.map((e) => (
+				<Reorder.Group className={styles.taskList} axis="y" values={visibleTasks} onReorder={setTaskList}>
+					{visibleTasks.map((e) => (
 						<Reorder.Item className={styles.item} key={e.name} value={e}>
-							<Task handdleDel={handdleDelete} taskName={e.name} completed={e.complete} />
+							<Task handdleComplete={handdleComplete} handdleDel={handdleDelete} taskName={e.name} completed={e.complete} />
 						</Reorder.Item>
 					))}
 				</Reorder.Group>
 				<div className={styles.taskStatus}>
-					<div className={styles.itemsLeft}>{taskList.length} items left</div>
+					<div className={styles.itemsLeft}>{visibleTasks.length} items left</div>
 					<div className={styles.taskFilters}>
-						<button className={styles.btn}>All</button>
-						<button onClick={handdleActive} className={styles.btn}>
+						<button onClick={() => handdleFilter('all')} className={styles.btn}>
+							All
+						</button>
+						<button onClick={() => handdleFilter('active')} className={styles.btn}>
 							Active
 						</button>
-						<button onClick={handdleFilterComplete} className={styles.btn}>
+						<button onClick={() => handdleFilter('completed')} className={styles.btn}>
 							Completed
 						</button>
 					</div>

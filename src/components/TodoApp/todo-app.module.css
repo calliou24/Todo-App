@@ -1,89 +1,81 @@
-.todoApp{
-  position: relative;
-  margin: auto;
-  z-index: 100;
-  width: 90%;
-  max-width: 500px;
+.todoApp {
+	position: relative;
+	margin: auto;
+	z-index: 100;
+	width: 90%;
+	max-width: 500px;
 }
-.head{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 0 40px 0;
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 40px 0;
 }
-.logoText{
-  color: var(--white);
-  letter-spacing: 5px;
-  font-size: 2.2rem;
-  
-
+.logoText {
+	color: var(--white);
+	letter-spacing: 5px;
+	font-size: 2.2rem;
 }
 /* .themeIcon{
 
 } */
 
-.taskCont{
-  display: grid;
-  place-items: center;
-  background-color: var(--task-bg);
-  box-shadow: 0 0 20px 10px #0002;
-  border-radius: 3px;
-  position: relative;
-  transition:all .2s;
-
-  
+.taskCont {
+	display: grid;
+	place-items: center;
+	background-color: var(--task-bg);
+	box-shadow: 0 0 20px 10px #0002;
+	border-radius: 3px;
+	position: relative;
+	transition: all .2s;
 }
-.taskList{
-  width: 100%;
-  list-style: none;
-  overflow-y: scroll;
-  max-height: 400px;
-
+.taskList {
+	width: 100%;
+	list-style: none;
+	overflow-y: scroll;
+	max-height: 400px;
 }
-
 
 /* .item{
 
 } */
 
-.taskStatus{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 20px;
-  
-} 
-.itemsLeft{
-  color: var(--dark-grayish-blue);
+.taskStatus {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 20px;
 }
-.taskFilters{
-  display: flex;
-  column-gap:20px;
+.itemsLeft {
+	color: var(--dark-grayish-blue);
+}
+.taskFilters {
+	display: flex;
+	column-gap: 20px;
 }
 
 .btn {
-  border: none;
-  background:transparent ;
-  cursor: pointer;
-  color: var(--text);
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	color: var(--text);
 }
 
-
 .changeTheme {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 @media (max-width: 50em) {
-  .taskFilters{
-    background-color: var(--task-bg);
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -70px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 10px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 0 #0002;
-  }
+	.taskFilters {
+		background-color: var(--task-bg);
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: -70px;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 10px;
+		border-radius: 5px;
+		box-shadow: 0 10px 20px 0 #0002;
+	}
 }

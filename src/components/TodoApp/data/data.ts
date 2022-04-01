@@ -1,4 +1,4 @@
-export const TaskDate = [
+export const TaskData = [
 	{
 		name: 'Complete the JavaScript course',
 		complete: true
