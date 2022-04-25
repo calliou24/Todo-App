@@ -54,7 +54,7 @@ function useGetData() {
 	const handdleAddTask = (task: any) => {
 		const { name } = task;
 		const taskName = name.toUpperCase().trim();
-		if (taskName.length < 2) return '';
+		if (taskName.length <= 0 ) return '';
 		for (let i = 0; i < taskList.length; i++) {
 			if (taskList[i].name.toUpperCase().trim() === taskName) {
 				return toast.warn('The task already exist');
@@ -63,7 +63,7 @@ function useGetData() {
 		return setTaskList(() => [ ...taskList, task ]);
 	};
 
-	const handdleFilter = (filter = 'all') => {
+	const handdleFilter = (filter:string) => {
 		const activeTask = taskList.filter((e) => {
 			const { complete } = e;
 			if (complete) return;
