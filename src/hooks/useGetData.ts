@@ -24,9 +24,21 @@ function useGetData() {
 	};
 
 	const handdleComplete = (taskName: string) => {
-
-		console.log('This function is temporaly unavailable :c')
-
+		let newItem = taskList.filter( e => {
+			if(e.name === taskName){
+				return e		
+			}
+			return
+		})
+		newItem[0].complete = !newItem[0].complete 
+		const list = taskList.filter(e => {
+			if(e.name === taskName){
+				return 			
+			}
+			return e
+		})
+		list.push(newItem[0])
+		setTaskList(list)
 	};
 
 	const handdleClearComplete = () => {

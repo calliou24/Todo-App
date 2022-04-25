@@ -18,7 +18,7 @@ function TodoApp() {
 		handdleClearComplete,
 		handdleDelete,
 		handdleComplete,
-		handdleFilter,
+		handdleFilter
 	} = useGetData();
 
 	return (
@@ -37,13 +37,22 @@ function TodoApp() {
 				<Form handdleAdd={handdleAddTask} />
 			</header>
 			<div className={styles.taskCont}>
-				<Reorder.Group className={styles.taskList} axis="y" values={visibleTasks} onReorder={setTaskList}>
-					{visibleTasks.map((e) => (
-						<Reorder.Item className={styles.item} key={e.name} value={e}>
-							<Task handdleComplete={handdleComplete} handdleDel={handdleDelete} taskName={e.name} completed={e.complete} />
-						</Reorder.Item>
-					))}
-				</Reorder.Group>
+				{visibleTasks.length > 0 ? (
+					<Reorder.Group className={styles.taskList} axis="y" values={visibleTasks} onReorder={setTaskList}>
+						{visibleTasks.map((e) => (
+							<Reorder.Item className={styles.item} key={e.name} value={e}>
+								<Task
+									handdleComplete={handdleComplete}
+									handdleDel={handdleDelete}
+									taskName={e.name}
+									completed={e.complete}
+								/>
+							</Reorder.Item>
+						))}
+					</Reorder.Group>
+				) : (
+					<h3 className={styles.addTask}>( Add a task )</h3>
+				)}
 				<div className={styles.taskStatus}>
 					<div className={styles.itemsLeft}>{visibleTasks.length} items left</div>
 					<div className={styles.taskFilters}>
